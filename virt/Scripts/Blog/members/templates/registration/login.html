@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+<h1>Login</h1>
+<li>
+Si no puede loguearse, tal vez su usuario se encuentra bloqueado
+</li>
+<div class="form group">
+<form method="POST">
+	{% csrf_token %}
+	{{form.as_p}}
+	<button class="btn btn-primary">Loguear</button>
+
+
+	<a href="{% url 'home' %}" class="btn btn-primary"> Atrás</a>  
+</div>
+{% endblock %}
